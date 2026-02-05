@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galería | La casita del malbec</title>
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <h1 class="titulo-principal">
+        <img src="../img/icono-vino.png" alt="Copa de vino" class="icono-titulo">
+        La casita del malbec
+      </h1>
+        <nav class="nav">
+            <button class="menu-toggle" id="menuToggle">☰</button>
+                <ul id="menu">
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="../pages/galeria.html">Galería</a></li>
+                    <li><a href="../pages/nosotros.html">Quiénes somos</a></li>
+                    <li><a href="../pages/contacto.html">Contacto</a></li>
+                </ul>
+        </nav>
+
+  </div>
+</header>
+
+<section class="galeria">
+  <div class="container">
+    <h2>Galería de fotos</h2>
+    <p>Conocé cada rincón de La casita del malbec.</p>
+
+    <div class="galeria-grid">
+  <img src="../img/foto1.jpeg" alt="Vista de la casa" class="galeria-img">
+  <img src="../img/foto2.jpeg" alt="Living" class="galeria-img">
+  <img src="../img/foto3.jpeg" alt="Habitación" class="galeria-img">
+  <img src="../img/foto4.jpeg" alt="Cocina" class="galeria-img">
+  <img src="../img/foto5.jpeg" alt="Exterior" class="galeria-img">
+  <img src="../img/foto7.jpeg" alt="Patio" class="galeria-img">
+  <img src="../img/foto8.jpeg" alt="Detalle interior" class="galeria-img">
+  <img src="../img/foto9.jpeg" alt="Vista desde la casa" class="galeria-img">
+</div>
+
+<!-- Lightbox -->
+<div id="lightbox" class="lightbox">
+  <span class="lightbox-close">&times;</span>
+
+  <span class="lightbox-prev">&#10094;</span>
+  <img id="lightbox-img" src="" alt="Imagen ampliada">
+  <span class="lightbox-next">&#10095;</span>
+</div>
+
+<script src="../js/main.js"></script>
+
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <p>© 2026 La casita del malbec - Mendoza, Argentina</p>
+  </div>
+</footer>
+
+</body>
+</html>
