@@ -179,3 +179,49 @@ function revealOnScroll() {
 
 window.addEventListener("scroll", revealOnScroll);
 revealOnScroll(); // para que cargue animado si ya está visible
+
+
+// =========================
+// FORMULARIO DE CONTACTO
+// =========================
+const form = document.getElementById("formContacto");
+const formMensaje = document.getElementById("formMensaje");
+
+if (form) {
+  form.addEventListener("submit", function (e) {
+    e.preventDefault(); // evita que recargue la página
+
+    const nombre = document.getElementById("nombre").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const mensaje = document.getElementById("mensaje").value.trim();
+
+    if (nombre === "" || email === "" || mensaje === "") {
+      formMensaje.textContent = "Por favor, completá todos los campos.";
+      formMensaje.className = "form-mensaje error";
+      return;
+    }
+
+    // Validación simple de email
+    if (!email.includes("@")) {
+      formMensaje.textContent = "Por favor, ingresá un email válido.";
+      formMensaje.className = "form-mensaje error";
+      return;
+    }
+
+    // Si todo está OK
+    formMensaje.textContent = "¡Gracias por tu mensaje! Te responderemos a la brevedad.";
+    formMensaje.className = "form-mensaje ok";
+
+    // (Opcional) Armar mensaje para WhatsApp
+    const textoWhatsApp = `Hola, soy ${nombre}. Mi email es ${email}. Quería consultar: ${mensaje}`;
+
+    // Si querés redirigir automáticamente a WhatsApp, descomentá estas líneas:
+     const telefono = "5492616403194"; // tu número
+     const url = `https://wa.me/${telefono}?text=${encodeURIComponent(textoWhatsApp)}`;
+     window.open(url, "_blank");
+
+    // Limpia el formulario
+    form.reset();
+  });
+}
+

@@ -406,9 +406,107 @@ section {
    CONTACTO
 ========================= */
 .contacto {
-  background-color: #ffffff;
+  padding: 80px 20px;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
 }
+
+.contacto-intro {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.contacto-cta {
+  margin-bottom: 40px;
+}
+
+.btn-whatsapp {
+  display: inline-block;
+  background: #7b1e2b; /* color vino */
+  color: #fff;
+  padding: 16px 30px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+  background: #5f1621; /* vino más oscuro al hover */
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+
+.contacto-nota {
+  margin-top: 10px;
+  color: #666;
+}
+
+.contacto-info {
+  display: grid;
+  gap: 10px;
+  margin-bottom: 50px;
+  color: #555;
+}
+
+.contacto-formulario {
+  margin-bottom: 50px;
+}
+
+.contacto-formulario form {
+  display: grid;
+  gap: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.contacto-formulario input,
+.contacto-formulario textarea {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: inherit;
+}
+
+.contacto-formulario button {
+  background: #7b1e2b;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.form-mensaje {
+  margin-top: 15px;
+  font-weight: bold;
+}
+.form-mensaje.ok {
+  color: #2e7d32; /* verde suave */
+}
+.form-mensaje.error {
+  color: #b71c1c; /* rojo */
+}
+
+
+.contacto-faq {
+  text-align: left;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+}
+
+.faq-item p {
+  color: #555;
+  margin-top: 5px;
+}
+
 
 /* =========================
    FOOTER
