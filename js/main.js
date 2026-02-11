@@ -225,3 +225,31 @@ if (form) {
   });
 }
 
+document.getElementById("reservaForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const telefono = document.getElementById("telefono").value;
+  const entrada = document.getElementById("entrada").value;
+  const salida = document.getElementById("salida").value;
+  const personas = document.getElementById("personas").value;
+  const mensaje = document.getElementById("mensaje").value;
+
+  const texto = `Hola! 👋 Quisiera hacer una reserva en La Casita del Malbec:
+
+Nombre: ${nombre}
+Teléfono: ${telefono}
+Entrada: ${entrada}
+Salida: ${salida}
+Personas: ${personas}
+Mensaje: ${mensaje || "Sin mensaje adicional"}
+
+Muchas gracias!`;
+
+  const numeroWhatsApp = "5492616403194"; 
+
+  const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
+
+  window.open(url, "_blank");
+});
+

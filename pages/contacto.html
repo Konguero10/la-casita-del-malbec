@@ -85,6 +85,43 @@
   </div>
 </section>
 
+<!-- Reserva -->
+ 
+<div class="reserva-form-container">
+  <h3>Solicitar reserva</h3>
+
+  <form id="reservaForm">
+    <div class="form-group">
+      <input type="text" id="nombre" placeholder="Nombre y apellido" required>
+    </div>
+
+    <div class="form-group">
+      <input type="tel" id="telefono" placeholder="WhatsApp o teléfono" required>
+    </div>
+
+    <div class="form-group">
+      <label>Fecha de entrada</label>
+      <input type="date" id="entrada" required>
+    </div>
+
+    <div class="form-group">
+      <label>Fecha de salida</label>
+      <input type="date" id="salida" required>
+    </div>
+
+    <div class="form-group">
+      <input type="number" id="personas" placeholder="Cantidad de personas" min="1" required>
+    </div>
+
+    <div class="form-group">
+      <textarea id="mensaje" placeholder="Mensaje adicional (opcional)"></textarea>
+    </div>
+
+    <button type="submit" class="btn-vino">Enviar solicitud</button>
+  </form>
+</div>
+
+
 
 <script src="../js/main.js"></script>
 
