@@ -1,6 +1,7 @@
 console.log("JS cargado OK");
 
 
+
 const slides = document.querySelectorAll(".hero-carousel img");
 let currentSlide = 0;
 
@@ -225,28 +226,32 @@ if (form) {
   });
 }
 
-document.getElementById("reservaForm").addEventListener("submit", function(e) {
+document.getElementById("reservaForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  const nombre = document.getElementById("nombre").value;
+  const nombre = document.getElementById("nombreReserva").value;
   const telefono = document.getElementById("telefono").value;
   const entrada = document.getElementById("entrada").value;
   const salida = document.getElementById("salida").value;
   const personas = document.getElementById("personas").value;
-  const mensaje = document.getElementById("mensaje").value;
+  const mensaje = document.getElementById("mensajeReserva").value;
 
-  const texto = `Hola! 👋 Quisiera hacer una reserva en La Casita del Malbec:
+  let texto = `Hola! 👋 Quisiera hacer una reserva en La Casita del Malbec 🍷
 
 Nombre: ${nombre}
 Teléfono: ${telefono}
 Entrada: ${entrada}
 Salida: ${salida}
 Personas: ${personas}
-Mensaje: ${mensaje || "Sin mensaje adicional"}
+`;
 
-Muchas gracias!`;
+  if (mensaje.trim() !== "") {
+    texto += `\nMensaje: ${mensaje}\n`;
+  }
 
-  const numeroWhatsApp = "5492616403194"; 
+  texto += `\nMuchas gracias!`;
+
+  const numeroWhatsApp = "5492616403194"; // tu número con 54 + 9
 
   const url = `https://wa.me/${numeroWhatsApp}?text=${encodeURIComponent(texto)}`;
 
