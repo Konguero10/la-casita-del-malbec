@@ -108,15 +108,6 @@ h2 {
 }
 
 
-.hero-carousel img {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
 .hero-carousel img.active {
   opacity: 1;
 }
@@ -681,3 +672,60 @@ a, button {
 a:hover, button:hover {
   transform: translateY(-2px);
 }
+
+/* RESEÑAS */
+.reseñas {
+  padding: 4rem 1rem;
+  text-align: center;
+  background: #faf7f4; /* tono suave, tipo madera clara */
+}
+
+.reseñas h2 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.reseñas-sub {
+  color: #666;
+  margin-bottom: 2.5rem;
+}
+
+.reseñas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.reseña-card {
+  background: #fff;
+  padding: 1.8rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  max-width: 300px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.reseña-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+}
+
+.estrellas {
+  color: #8b1e3f; /* color vino */
+  font-size: 1.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.reseña-card p {
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.reseña-card span {
+  font-weight: bold;
+  color: #333;
+}
+
